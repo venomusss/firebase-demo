@@ -1,13 +1,16 @@
-import {useEffect} from "react";
-import {a} from "./firebase";
+import './firebase'
+import SignUpForm from "./components/SignUpForm";
+import LoginForm from "./components/LoginForm";
+import {signOutUser} from "./firebase";
 
 function App() {
-  // useEffect(()=>a(), []);
-  return (
-    <div className="App">
-
-    </div>
-  );
+    return (
+        <div className="App">
+            <SignUpForm/>
+            <LoginForm/>
+            <button onClick={() => signOutUser()}>Sign out</button>
+        </div>
+    );
 }
 
 export default App;
